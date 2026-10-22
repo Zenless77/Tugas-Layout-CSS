@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Profil - Zidane Hafizh Ali</title>
+
+    <style>
+        /* Pengaturan dasar halaman */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px 15px;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        /* Bingkai utama profil */
+        .profile-container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 2px solid #657991;
+            background-color: #fff;
+        }
+
+        .profile-container legend {
+            padding: 0 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #354b65;
+        }
+
+        /* Bagian foto, informasi, dan kategori */
+        .profile-header {
+            display: grid;
+            grid-template-columns: 150px minmax(0, 1fr) 150px;
+            gap: 20px;
+            align-items: start;
+        }
+
+        /* Foto profil */
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border: 3px solid #657991;
+            overflow: hidden;
+            background-color: #f8fafc;
+        }
+
+        .profile-photo img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Informasi profil */
+        .profile-info {
+            min-width: 0;
+            overflow-wrap: break-word;
+        }
+
+        .profile-info h1 {
+            margin: 0 0 15px;
+            font-size: 28px;
+            color: #354b65;
+        }
+
+        .profile-info p {
+            margin: 8px 0;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        /* Kategori sebelah kanan */
+        .categories {
+            min-width: 0;
+            text-align: right;
+            font-size: 13px;
+        }
+
+        .categories h3 {
+            margin: 5px 0 12px;
+            font-size: 15px;
+            text-decoration: underline;
+        }
+
+        .categories p {
+            margin: 8px 0;
+            line-height: 1.5;
+            overflow-wrap: break-word;
+        }
+
+        /* Deskripsi profil */
+        .description {
+            display: block;
+            width: 100%;
+            margin: 35px 0;
+            font-size: 14px;
+            line-height: 1.8;
+            overflow-wrap: break-word;
+        }
+
+        .description p {
+            margin: 0 0 20px;
+        }
+
+        /* Video, galeri, dan attachments */
+        .media-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1.4fr;
+            gap: 15px;
+            align-items: start;
+            margin-top: 30px;
+        }
+
+        /* Kotak video */
+        .video-box {
+            width: 100%;
+            min-width: 0;
+            border: 2px solid #657991;
+            background-color: #f8fafc;
+        }
+
+        .video-box video {
+            display: block;
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: contain;
+            background-color: #e9eef3;
+        }
+
+        /* Kotak galeri */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px;
+            padding: 10px;
+            border: 2px solid #657991;
+        }
+
+        .gallery img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border: 1px solid #9aa9b8;
+            background-color: #f8fafc;
+        }
+
+        /* Kotak attachments */
+        .attachments {
+            min-width: 0;
+            margin: 0;
+            padding: 12px 15px;
+            border: 2px solid #657991;
+            font-size: 13px;
+        }
+
+        .attachments legend {
+            padding: 0 5px;
+            font-weight: bold;
+        }
+
+        .attachments ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+
+        .attachments li {
+            margin: 10px 0;
+            overflow-wrap: anywhere;
+        }
+
+        .attachments a {
+            color: #426b94;
+            text-decoration: underline;
+        }
+
+        /* Tampilan tablet dan layar kecil */
+        @media (max-width: 700px) {
+            body {
+                padding: 15px 8px;
+            }
+
+            .profile-container {
+                padding: 15px;
+            }
+
+            .profile-header {
+                grid-template-columns: 110px minmax(0, 1fr);
+                gap: 15px;
+            }
+
+            .profile-photo {
+                width: 110px;
+                height: 110px;
+            }
+
+            .profile-info h1 {
+                font-size: 22px;
+            }
+
+            .categories {
+                grid-column: 1 / -1;
+                text-align: left;
+            }
+
+            .categories h3 {
+                margin-top: 5px;
+            }
+
+            .description {
+                margin: 25px 0;
+            }
+
+            .media-section {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .attachments {
+                grid-column: 1 / -1;
+            }
+        }
+
+        /* Tampilan ponsel */
+        @media (max-width: 420px) {
+            .profile-header {
+                grid-template-columns: 1fr;
+            }
+
+            .profile-photo {
+                width: 130px;
+                height: 130px;
+            }
+
+            .categories {
+                grid-column: auto;
+            }
+
+            .media-section {
+                grid-template-columns: 1fr;
+            }
+
+            .attachments {
+                grid-column: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <fieldset class="profile-container">
+        <legend>Profile Page</legend>
+
+        <!-- Bagian atas: foto, informasi, dan kategori -->
+        <header class="profile-header">
+
+            <div class="profile-photo">
+                <img src="Praktikum_Layout/Logo/Muka.jpeg" alt="Foto profil">
+            </div>
+
+            <div class="profile-info">
+                <h1>Zidane Hafizh Ali</h1>
+
+                <p>Prodi : Teknik Informatika</p>
+                <p>Alamat : Depok</p>
+                <p>
+                    Telephone:
+                    <a href="tel:089635944813">
+                        0896 3594 4813
+                    </a>
+                </p>
+                <p>
+                    Email:
+                    <a href="mailto:Zidane@gmail.com">
+                        Zidane@gmail.com
+                    </a>
+                </p>
+            </div>
+
+            <aside class="categories">
+                <h3>Categories</h3>
+                <p>Web Development</p>
+                <p>UI/UX Design</p>
+                <p>Programming</p>
+                <p>Computer Networks</p>
+            </aside>
+
+        </header>
+
+        <!-- Deskripsi: terpisah dari header agar lebarnya penuh -->
+        <article class="description">
+
+            <section>
+                <p>
+                    Halo semuanya! Selamat datang di halaman profil saya.
+                    Saya adalah seorang mahasiswa STT Nurul Fikri dengan
+                    program studi Teknik Informatika. Saya memiliki minat
+                    yang besar dalam pengembangan web dan teknologi informasi.
+                    Anda dapat menemukan informasi tentang saya di halaman ini.
+                </p>
+            </section>
+
+            <section>
+                <p>
+                    Saya berasal dari SMK Harapan Bangsa dengan jurusan
+                    Teknik Komputer Jaringan. Saya memiliki pengalaman dalam
+                    pengembangan web, pemrograman, dan administrasi jaringan.
+                    Saya juga tertarik mempelajari berbagai teknologi baru
+                    untuk meningkatkan kemampuan saya di bidang teknologi.
+                </p>
+            </section>
+
+        </article>
+
+        <!-- Bagian bawah: video, galeri, dan attachments -->
+        <div class="media-section">
+
+            <section class="video-box">
+                <video controls>
+                    <source src="Praktikum_Layout/Logo/Bola.mp4" type="video/mp4">
+                    Browser Anda tidak mendukung video.
+                </video>
+            </section>
+
+            <section class="gallery">
+                <img src="Praktikum_Layout/Logo/vscode.jpg" alt="Foto galeri 1">
+                <img src="Praktikum_Layout/Logo/Alan.png" alt="Foto galeri 2">
+            </section>
+
+            <fieldset class="attachments">
+                <legend>Attachments</legend>
+
+                <ul>
+                    <li>
+                        <a href="Praktikum_Layout/Logo/CV.pdf" target="_blank">
+                            Dokumen profil PDF
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Praktikum_Layout/Logo/MTCNA.pdf" target="_blank">
+                            Sertifikat pelatihan
+                        </a>
+                    </li>
+                </ul>
+            </fieldset>
+
+        </div>
+
+    </fieldset>
+
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walkers Web</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 15px;
+            font-family: Arial, sans-serif;
+            color: #555;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            margin: auto;
+            padding: 8px;
+            border: 2px solid #999;
+            background-color: white;
+        }
+
+        header {
+            background-color: #f5d928;
+            min-height: 150px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+        }
+
+        header h1 {
+            margin: 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #22a447;
+            margin: 8px 0;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            display: flex;
+            gap: 12px;
+            align-items: stretch;
+        }
+
+        article {
+            background-color: #f5e3b0;
+            flex: 2;
+            min-width: 0;
+            padding: 15px;
+        }
+
+        section {
+            background-color: #fff5d6;
+            padding: 15px;
+            margin-top: 12px;
+            border: 1px solid #ddd;
+            scroll-margin-top: 15px;
+        }
+
+        aside {
+            background-color: #16bde0;
+            flex: 1;
+            min-width: 0;
+            padding: 15px;
+        }
+
+        aside img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #f5d928;
+            padding: 18px;
+            margin-top: 12px;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            .content {
+                flex-direction: column;
+            }
+
+            header {
+                gap: 12px;
+                padding: 15px;
+            }
+
+            .logo {
+                width: 65px;
+                height: 65px;
+            }
+
+            header h1 {
+                font-size: 24px;
+            }
+
+            nav {
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <header id="home">
+            <img src="Logo/Alan.png"
+                 alt="Logo Walkers Web"
+                 class="logo">
+
+            <div>
+                <h1>Walkers Web</h1>
+                <p>Explore the World</p>
+            </div>
+        </header>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#artikel">Artikel</a>
+            <a href="#galeri">Galeri</a>
+            <a href="#tentang">Tentang</a>
+        </nav>
+
+        <div class="content">
+
+            <article id="artikel">
+                <h2>Artikel</h2>
+
+                <section id="home-artikel">
+                    <h3>Selamat Datang</h3>
+                    <p>
+                        Selamat datang di Walkers Web.
+                        Website ini membahas berbagai berita musik,
+                        artis musik terkini, dan masih banyak lagi.
+                    </p>
+                </section>
+
+                <section id="destinasi">
+                    <h3>Berita Musik</h3>
+                    <p>
+                        Temukan berita musik terbaru, ulasan album,
+                        dan informasi tentang artis favoritmu.
+                    </p>
+                </section>
+
+                <section id="tentang">
+                    <h3>Top Artis</h3>
+                    <p>
+                        Jelajahi daftar artis musik terpopuler dan
+                        temukan lagu-lagu favoritmu.
+                    </p>
+                </section>
+            </article>
+
+            <aside id="galeri">
+                <h2>Info Konser</h2>
+
+                <img src="Logo/Abel.jpg"
+                     alt="Konser">
+
+                <p>Informasi tentang konser musik terdekat.</p>
+            </aside>
+
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Walkers Web</p>
+        </footer>
+
+    </div>
+</body>
+</html>

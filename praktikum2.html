@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Zen Fried Chicken</h1>
+
+    <p>
+        Welcome to our online store. Please fill out the form below to place your order!
+    </p>
+
+    <form action="Hasil_Order.html" method="get">
+        <fieldset>
+            <legend>Your Information</legend>
+
+            <p>
+                <label for="name">Name: </label>
+                <input type="text" id="name" name="name">
+            </p>
+
+            <p>
+                <label for="address">Address: </label>
+                <input type="text" id="address" name="address">
+            </p>
+
+            <p>
+                <label for="phone">Phone: </label>
+                <input type="tel" id="phone" name="phone">
+            </p>
+
+            <p>
+                <label for="email">Email: </label>
+                <input type="email" id="email" name="email">
+            </p>
+
+            <p>
+                <label for="instruction">Delivery Instruction:</label><br>
+                <textarea
+                id="instruction"
+                name="instruction"
+                rows="4"
+                cols="50"
+                maxlength="400"
+                placeholder="No more than 400 characters.">
+                </textarea>
+            </p>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Design your favorite chicken</legend>
+            <p>Chicken specs</p>
+            <p>Choose one:</p>
+
+            <p>
+                <input type="radio" id="Drumstick" name="crust" value="Drumstick" required>
+                <label for="Drumstick">Drumstick</label><br>
+
+                <input type="radio" id="Thigh" name="crust" value="Thigh" required>
+                <label for="Thigh">Thigh</label><br>
+
+                <input type="radio" id="Wings" name="crust" value="Wings" required>
+                <label for="Wings">Wings</label><br>
+
+                <input type="radio" id="Breast" name="crust" value="Breast" required>
+                <label for="Breast">Breast</label><br>
+
+                <input type="radio" id="Back" name="crust" value="Back" required>
+                <label for="Back">Back</label><br>
+
+                <input type="radio" id="Tenderloin" name="crust" value="Tenderloin" required>
+                <label for="Tenderloin">Tenderloin</label><br>
+            </p>
+
+            <p>Seasonings</p>
+
+            <p>
+                <input type="checkbox" id="Ketchup sauce" name="topping" value="Ketchup sauce" checked>
+                <label for="Ketchup sauce">Ketchup Sauce</label><br>
+
+                <input type="checkbox" id="BBQ Sauce" name="topping" value="BBQ Sauce">
+                <label for="BBQ Sauce">BBQ Sauce</label><br>
+
+                <input type="checkbox" id="Soy sauce" name="topping" value="Soy sauce">
+                <label for="Soy sauce">Soy Sauce</label><br>
+
+                <input type="checkbox" id="Hot sauce" name="topping" value="Hot sauce">
+                <label for="Hot sauce">Hot Sauce</label><br>
+
+                <input type="checkbox" id="Honey" name="topping" value="Honey">
+                <label for="Honey">Honey</label><br>
+
+                <input type="checkbox" id="Mayonnaise" name="topping" value="Mayonnaise">
+                <label for="Mayonnaise">Mayonnaise</label><br>
+
+                <input type="checkbox" id="Cheese sauce" name="topping" value="Cheese sauce">
+                <label for="Cheese sauce">Cheese Sauce</label><br>
+            </p>
+
+            <p>
+                <label for="quantity">Quantity: </label>
+                <input type="number" id="quantity" name="quantity" min="1" max="10">
+            </p>
+        </fieldset>
+
+        <p>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </p>
+    </form>
+
+
+</body>
+</html>
